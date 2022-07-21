@@ -1,6 +1,6 @@
 /*
     That a simple, fast and  memory efficient way 
-    to cross the whole milky way of the  dicovery board !
+    to cross the whole milky way of the dicovery board !
 */
 
 //Physical registers for GPIO switch.
@@ -57,6 +57,6 @@ volatile void custom_ISR_EXTIO(void){
     speed=100;
   }
   else{
-    speed-=50;
+    speed-=5;
   }
 }
