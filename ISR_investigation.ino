@@ -1,6 +1,7 @@
 /*
-    That a simple, fast and  memory efficient way 
+       That a simple, fast and  memory efficient way 
     to cross the whole milky way of the dicovery board !
+              ***code in investigation***
 */
 
 //Physical registers for GPIO switch.
