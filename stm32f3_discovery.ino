@@ -67,7 +67,6 @@ void setup() {
 uint8_t speed = 100;
 uint8_t ct = 0;
 void loop() {
-	while(1){
 		*___ODR ^= 1<<(8+ct); // 8 is the bit 8 of the first led of the wheel which start at PE8.
 		ct++;
 		delay(speed);
@@ -83,5 +82,4 @@ void loop() {
 				}
 			ct=0;
 		}
-	}
 }
