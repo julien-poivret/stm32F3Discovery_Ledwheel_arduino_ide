@@ -18,8 +18,8 @@ volatile uint32_t* ___SYSCFG_EXTI1CR1 = (volatile uint32_t *) 0x40010008;
 
 
 void setup() {
-  Serial.begin(9600);
-  Serial.println("Program start");
+  //Serial.begin(9600);
+  //Serial.println("Program start");
   *___RCC_AHBENR |= 0x220000;        // Enable clock on port E and A  
   *___GPIOE_MODER = 0x55550000;      // Enable all leds on the demo wheel in output mode on GPIO_E.
   *___GPIOA_MODER &= ~0x3;           // Set PA0 (press button) as input on GPIO_A.
@@ -52,7 +52,7 @@ void loop() {
   a free and open source way to code custom ISR when it will work. 
   once done timer and compare interrupt are just a formality 
 */
-volatile void custom_ISR_EXTIO(void){
+void EXTI0_IRQHandler(void){
   if(speed<=5){
     speed=100;
   }
