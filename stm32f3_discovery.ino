@@ -54,7 +54,7 @@ volatile uint32_t* ___ODR = (volatile uint32_t *) 0x48001014;
 void setup() {
 	Serial.begin(9600);
 	Serial.println("Program start");
-	*___RCC_AHBENR |= 0x200000;  // Enable clock on port E     
+	*___RCC_AHBENR |= 0x200000;        // Enable clock on port E     
 	*___GPIOE_MODER = 0x55550000;      // Enable all leds on the demo wheel in output mode.
 	Serial.println(*___GPIOE_MODER, HEX);
 }
