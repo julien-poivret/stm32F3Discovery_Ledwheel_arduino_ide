@@ -1,7 +1,6 @@
 /*
-       That a simple, fast and  memory efficient way 
+    That a simple, fast and memory efficient way 
     to cross the whole milky way of the dicovery board !
-              ***code in investigation***
 */
 
 //Physical registers for GPIO switch.
@@ -29,10 +28,10 @@ void setup() {
   *___GPIOA_PUPDR |= 0x1;            //  (lvl high when not pressed)
   //Serial.println(*___GPIOE_MODER, HEX);
 
-  // setting up EXTI0 interrupt on PA0 easly from datasheet.
+  // setting up interrupt easly from datasheet.
   *___EXIT_IMR1 |= 1;                 // Disable mask bit for EXTI0;
   *___EXIT_RTSR1 |= 1;                // Set interrupt in Raising trigger mode ON.
-  *___EXIT_RTSF1 &= ~1;                // Set interrupt in Falling trigger mode OFF.
+  *___EXIT_FTSR1 &= ~1;                // Set interrupt in Falling trigger mode OFF.
   *___SYSCFG_EXTI1CR1 &= ~0x7;        // Set PA0 on EXTI0 
 
   // Now i "just" need to handle the ISR by pointing a C function from the vector table
@@ -41,9 +40,9 @@ void setup() {
   // from efficient an simple code from datasheet reading.
 }
 
-
 uint8_t speed = 100;// 100 ms 
 uint8_t ct = 0;
+
 void loop() {
   *___ODR ^= 1<<8; //toggle PE8 on/off
   delay(speed);
