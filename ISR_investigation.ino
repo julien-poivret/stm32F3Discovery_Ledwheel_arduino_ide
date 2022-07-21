@@ -49,7 +49,7 @@ void loop() {
 }
 
 /* 
-  a free and open source  way to code custom ISR when it will work. 
+  a free and open source way to code custom ISR when it will work. 
   once done timer and compare interrupt are just a formality 
 */
 volatile void custom_ISR_EXTIO(void){
