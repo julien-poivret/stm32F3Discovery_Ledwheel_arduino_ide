@@ -44,6 +44,8 @@
                                                                             ';;:
                                                                              `
 
+  Never take yourself for something that you are not ! 
+  *just learn and think !
 */
 
 
