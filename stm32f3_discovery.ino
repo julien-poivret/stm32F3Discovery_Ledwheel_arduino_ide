@@ -12,7 +12,41 @@
    manufacturer, and your ability to code instructions, some may be disappointed by the specificity, but it's how programming MCU works,
    as an "engineering tool". The purpose of this mem code is to learn fundamental behavior which works on several architectures
    avr pic arm x86 ect... mainly relevant of how hardware behavior works.
+
+                                               Goofy           .;;;.
+                                                              :;;;;:'   .;
+                                                             :;;: .;;;',;;;; ;:
+                                                             :: ,;;;;`;;;:'::;;:,
+                                                              :;;;;;; ;;,$$$c` $L
+                                                              ;;;;;;;`: $$$$$h $$:
+                                                             :;;;;;;;,`J$$$$$$h$$$>
+                                                             ;;;;`;';;`3$$$$$$$$$$N
+                                                             ;;',;:;;;`3$$$$$$$$$$$>                  cc,
+                                                             ',;',;;;;,?$$$$$$$$$$$>                cCC''C
+                                                            .;'.:;;';;:'$$$$$$$$$$$E               cCCC;'>
+                                                          ,;` ';;',$nn`:?$$$$$$$$$$f               CCCCcC
+                                                        ,;`    ':'$$$$$  ?$$$F ?>  >           zdF CCCCC
+                                                       ;;`       '$$???$L ?$P  '  .,ur .d$$ u$$$$$ CCC",
+                                                     :;;;         $x$h"i7$L"h  d$$$F.d$$$":$$$$$$$$,,c$$
+                                                    :;;;          ?$$$k`$$$$fd$$$$ d$$$$ d$$$$$$$$$$$$$F;$L
+                                                    ;;;'           ?$$$L`$$$$$$$$k$$$$$b$$$$$$$$$$$$$$F;$$E
+                                                   :;;;`          c`"$$$h`$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                                                   ;;;;`         cC $$$$$h "$$$$$$$$$$$$$$$$$FJ$$$P $$$$"
+                                                  ,;;;;`        ,C $$$$$$$$h "?$$$$$$$$$$$Cd$.$$F d$P"
+                                                  :;;;;`       ,C'9$$$$$$$$$$$u '"?$$$$$$$$$F"  .,cc>
+                                                  :;;;;'       CC $$$$$$$$$$h'?$$$-....         d$R"
+                                                  :;;;;;       CC,'$$$$$$$$$$" ::  $$$$"
+                                                  ';;;;;       "CCc  """""    :;;
+                                                   :;;;;`        'CC          :;;'
+                                                   `:::'                      ;;;
+                                                                             :;;;
+                                                                            ';;;;
+                                                                            ';;:
+                                                                             `
+
 */
+
+
 volatile uint32_t* ___GPIOE_MODER = (volatile uint32_t *) 0x48001000;
 volatile uint32_t* ___RCC_AHBENR = (volatile uint32_t *) 0x40021014;
 volatile uint32_t* ___ODR = (volatile uint32_t *) 0x48001014;
