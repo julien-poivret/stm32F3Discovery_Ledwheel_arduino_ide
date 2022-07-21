@@ -7,11 +7,11 @@
 /*
    Code from the reference manual of the stm32f3 chip and the board user manual of the STM32F303VC MCU.
                                            (On https://www.st.com)
-   This is an engineering method for programing micro controller unit and hardware in general, it's not something
+   This is an engineering method for programming microcontroller unit and hardware in general, it's not something
    to know or even to learn by heart, but simply relevant of your understanding of the technical instruction of the chip 
-   manufacturer, and your ability to code instructions, some may be disappointed by the specificity, but it's how programing MCU works,
-   as an "enginerring tool". The purpose of this mem code is to learn fundamental behavior which works on several architectures
-   avr pic arm x86 ect... mainly relevant of how hardware behaviour works. 
+   manufacturer, and your ability to code instructions, some may be disappointed by the specificity, but it's how programming MCU works,
+   as an "engineering tool". The purpose of this mem code is to learn fundamental behavior which works on several architectures
+   avr pic arm x86 ect... mainly relevant of how hardware behavior works.
 */
 volatile uint32_t* ___GPIOE_MODER = (volatile uint32_t *) 0x48001000;
 volatile uint32_t* ___RCC_AHBENR = (volatile uint32_t *) 0x40021014;
