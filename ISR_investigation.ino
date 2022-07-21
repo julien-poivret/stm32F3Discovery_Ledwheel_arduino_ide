@@ -28,7 +28,7 @@ void setup() {
   *___GPIOA_PUPDR |= 0x1;            //  (lvl high when not pressed)
   //Serial.println(*___GPIOE_MODER, HEX);
 
-  // setting up interrupt easly from datasheet.
+  // setting up EXTI0 interrupt on PA0 easly from datasheet.
   *___EXIT_IMR1 |= 1;                 // Disable mask bit for EXTI0;
   *___EXIT_RTSR1 |= 1;                // Set interrupt in Raising trigger mode ON.
   *___EXIT_RTSF1 &= ~1;                // Set interrupt in Falling trigger mode OFF.
