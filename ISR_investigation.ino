@@ -32,7 +32,7 @@ void setup() {
 
   *___GPIOA_PUPDR &= ~0x3;           // no pullup 
   // *___GPIOA_PUPDR |= 0x2;          // Set PA0 in pull-down mode (lvl low when not pressed)
-
+  ////////////////////////////////////////////////////////////////////////////////////////////////
   // setting up interrupt easly from datasheet.
   *___RCC_APB2ENR |= 1;               // Enable Syscfg clock
   *___SYSCFG_EXTI1CR1 &= ~0x7;        // Set PA0 on EXTI0 
@@ -46,8 +46,10 @@ void setup() {
   *___NVIC_ISER |= 0x40;
   *___NVIC_IABR |= 0x40; 
 
-//  NVIC_EnableIRQ(EXTI0_IRQn);
-//  NVIC_SetPriority(EXTI0_IRQn, 0);
+  //  NVIC_EnableIRQ(EXTI0_IRQn);
+  //  NVIC_SetPriority(EXTI0_IRQn, 0);
+  /////////////////////////////////////////////////////////////////////////////////////////////
+  attachInterrupt(digitalPinToInterrupt(PA0), EXTI0_IRQHandler, FALLING);
 }
 
 uint32_t speed = 500; // 100 ms 
@@ -57,7 +59,14 @@ void loop() {
   *___ODR ^= 1<<8; // toggle PE8 on/off
   Serial.println(*___GPIOA_IDR, BIN);
   delay(speed);
+    
 }
+/*
+   the irq is not handled as it should and that may simply come from the stm32duino core 
+   abstraction layer, which simply prefer an arduino syntax: 
+   attachInterrupt(digitalPinToInterrupt(PA0), EXTI0_IRQHandler, FALLING);
+   which work perfectly well by the way.
+*/
 
 void EXTI0_IRQHandler(void){
   Serial.println("plop");
