@@ -43,8 +43,6 @@ void setup() {
   *___EXIT_RTSR1 |= 1;               // Set interrupt in Raising trigger mode ON.
   *___EXIT_FTSR1 &= ~1;              // Set interrupt in Falling trigger mode OFF.
 
-  Serial.println(*___SYSCFG_EXTI1CR1, HEX);
-  Serial.println(*___NVIC_ISER, HEX);
   *___NVIC_ISER |= 0x40;
   *___NVIC_IABR |= 0x40; 
 
